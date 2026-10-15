@@ -70,7 +70,7 @@ export function SiteHeader() {
               href={item.href}
               className={cn(
                 "rounded-full px-4 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground",
-                pathname === item.href && "bg-primary/10 text-primary",
+                pathname === item.href && "bg-secondary text-primary",
               )}
             >
               {t(item.en, item.bn)}

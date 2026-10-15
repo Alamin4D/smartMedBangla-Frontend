@@ -12,8 +12,8 @@ import { useInteractionCheck } from "./api";
 import { useT } from "@/hooks/use-t";
 
 const RISK_UI = {
-  LOW: { en: "Low risk", bn: "কম ঝুঁকি", variant: "success" as const, box: "bg-success/10" },
-  MODERATE: { en: "Moderate risk", bn: "মাঝারি ঝুঁকি", variant: "warning" as const, box: "bg-warning/15" },
+  LOW: { en: "Low risk", bn: "কম ঝুঁকি", variant: "success" as const, box: "bg-secondary" },
+  MODERATE: { en: "Moderate risk", bn: "মাঝারি ঝুঁকি", variant: "warning" as const, box: "bg-secondary ring-1 ring-primary/20" },
   HIGH: { en: "High risk", bn: "উচ্চ ঝুঁকি", variant: "destructive" as const, box: "bg-destructive/10" },
   UNKNOWN: { en: "Unclear", bn: "অস্পষ্ট", variant: "secondary" as const, box: "bg-muted" },
 };
@@ -107,7 +107,7 @@ export function InteractionChecker({ patientId, includesCurrent = true }: { pati
               </div>
             ))}
             {report.duplicateTherapy.length > 0 && (
-              <p className="rounded-xl bg-warning/15 p-3 text-sm">
+              <p className="rounded-xl bg-secondary p-3 text-sm">
                 <strong>{t("Same medicine twice: ", "একই ওষুধ দুইবার: ")}</strong>
                 {report.duplicateTherapy.join("; ")}
               </p>

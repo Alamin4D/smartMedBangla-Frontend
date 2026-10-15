@@ -58,7 +58,7 @@ export function AdherenceInsightPanel({ patientId }: { patientId?: string }) {
               </div>
               <div>
                 <h4 className="mb-2 flex items-center gap-2 font-semibold">
-                  <Lightbulb className="size-4 text-amber-500" /> {t("Tips", "পরামর্শ")}
+                  <Lightbulb className="size-4 text-primary" /> {t("Tips", "পরামর্শ")}
                 </h4>
                 <ul className="space-y-2">
                   {data.tips.map((line, i) => (

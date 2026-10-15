@@ -21,7 +21,7 @@ import { useT } from "@/hooks/use-t";
 
 const STATE_UI = {
   OK: { en: "Good", bn: "ভালো আছে", variant: "success" as const, ring: "" },
-  EXPIRING: { en: "Expiring soon", bn: "শীঘ্রই মেয়াদ শেষ", variant: "warning" as const, ring: "border-warning" },
+  EXPIRING: { en: "Expiring soon", bn: "শীঘ্রই মেয়াদ শেষ", variant: "warning" as const, ring: "border-primary/50" },
   EXPIRED: { en: "Expired — do not take", bn: "মেয়াদোত্তীর্ণ — খাবেন না", variant: "destructive" as const, ring: "border-destructive" },
   DISPOSED: { en: "Disposed", bn: "ফেলে দেওয়া হয়েছে", variant: "secondary" as const, ring: "opacity-70" },
 };
@@ -90,7 +90,7 @@ function ItemCard({ item, patientId, onEdit }: { item: InventoryItem; patientId?
           <p className="text-xs text-muted-foreground">{t("Expiry date", "মেয়াদ শেষের তারিখ")}</p>
           <p className="text-2xl font-bold">{fmtDate(item.expiryDate)}</p>
           {!item.isDisposed && (
-            <p className={cn("text-sm", item.daysLeft < 0 ? "text-destructive" : item.daysLeft <= 7 ? "text-amber-600" : "text-muted-foreground")}>
+            <p className={cn("text-sm", item.daysLeft < 0 ? "text-destructive" : item.daysLeft <= 7 ? "font-semibold text-primary" : "text-muted-foreground")}>
               {item.daysLeft < 0 ? t(`Expired ${Math.abs(item.daysLeft)} days ago`, `${n(Math.abs(item.daysLeft))} দিন আগে মেয়াদ শেষ`) : item.daysLeft === 0 ? t("Expires today", "আজ মেয়াদ শেষ") : t(`${item.daysLeft} days left`, `আর ${n(item.daysLeft)} দিন বাকি`)}
             </p>
           )}

@@ -84,7 +84,7 @@ export default function NotificationsPage() {
                   <span
                     className={cn(
                       "grid size-10 shrink-0 place-items-center rounded-full",
-                      n.type === "MISSED_DOSE" ? "bg-destructive/10 text-destructive" : n.type === "EXPIRY_ALERT" ? "bg-warning/20 text-amber-700" : "bg-primary/10 text-primary",
+                      n.type === "MISSED_DOSE" ? "bg-destructive/10 text-destructive" : n.type === "EXPIRY_ALERT" ? "bg-secondary text-primary ring-1 ring-primary/20" : "bg-secondary text-primary",
                     )}
                   >
                     <Icon className="size-5" />

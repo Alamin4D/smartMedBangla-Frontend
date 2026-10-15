@@ -3,9 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const tones = {
-  primary: "bg-primary/10 text-primary",
-  success: "bg-success/15 text-success",
-  warning: "bg-warning/20 text-amber-700 dark:text-warning",
+  primary: "bg-primary text-primary-foreground",
+  success: "bg-secondary text-primary",
+  warning: "bg-secondary text-primary ring-1 ring-primary/20",
   danger: "bg-destructive/10 text-destructive",
   muted: "bg-muted text-muted-foreground",
 } as const;

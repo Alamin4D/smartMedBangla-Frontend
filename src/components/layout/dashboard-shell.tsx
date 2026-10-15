@@ -84,7 +84,7 @@ export function DashboardShell({ children, allow }: { children: ReactNode; allow
         </header>
 
         {!user.isEmailVerified && (
-          <div className="flex flex-wrap items-center gap-3 border-b bg-warning/15 px-4 py-2.5 text-sm">
+          <div className="flex flex-wrap items-center gap-3 border-b bg-secondary px-4 py-2.5 text-sm text-secondary-foreground">
             <MailWarning className="size-5 shrink-0" />
             <span>{t("Verify your email to unlock AI scans, caregivers and payments.", "এআই স্ক্যান, কেয়ারগিভার ও পেমেন্ট চালু করতে আপনার ইমেইল যাচাই করুন।")}</span>
             <Button size="sm" variant="outline" asChild className="ml-auto">

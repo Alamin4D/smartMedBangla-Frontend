@@ -59,7 +59,7 @@ export function CaregiverHome({ user }: { user: User }) {
                   <div className="flex items-center gap-3">
                     <Avatar className="size-12">
                       {patient.avatarUrl && <AvatarImage src={patient.avatarUrl} alt="" />}
-                      <AvatarFallback className="bg-primary/15 text-primary">{initials(patient.name)}</AvatarFallback>
+                      <AvatarFallback className="bg-secondary text-primary">{initials(patient.name)}</AvatarFallback>
                     </Avatar>
                     <div className="min-w-0 flex-1">
                       <h2 className="truncate text-lg font-semibold">{patient.name}</h2>

@@ -145,8 +145,8 @@ export function PrescriptionDetail({ id, patientId }: { id: string; patientId?: 
             </Alert>
           )}
           {rx.status === "PROCESSED" && (
-            <Alert className="mb-6 border-warning/50 bg-warning/10">
-              <Sparkles className="text-amber-600" />
+            <Alert className="mb-6 border-primary/30 bg-secondary">
+              <Sparkles className="text-primary" />
               <AlertTitle>{t("Please review before reminders start", "রিমাইন্ডার শুরুর আগে মিলিয়ে দেখুন")}</AlertTitle>
               <AlertDescription>{t("AI can make mistakes with handwriting. Compare each medicine with the photo, then confirm.", "হাতের লেখা পড়তে এআই ভুল করতে পারে। প্রতিটি ওষুধ ছবির সাথে মিলিয়ে নিশ্চিত করুন।")}</AlertDescription>
             </Alert>

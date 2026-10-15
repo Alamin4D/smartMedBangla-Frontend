@@ -85,7 +85,7 @@ export function PatientCareCircle() {
               <li key={link.id} className="flex items-center gap-3 rounded-xl border bg-card p-4">
                 <Avatar className="size-11">
                   {link.caregiver?.avatarUrl && <AvatarImage src={link.caregiver.avatarUrl} alt="" />}
-                  <AvatarFallback className="bg-primary/15 text-primary">{initials(link.caregiver?.name ?? link.inviteEmail)}</AvatarFallback>
+                  <AvatarFallback className="bg-secondary text-primary">{initials(link.caregiver?.name ?? link.inviteEmail)}</AvatarFallback>
                 </Avatar>
                 <div className="min-w-0 flex-1">
                   <p className="truncate font-semibold">{link.caregiver?.name ?? link.inviteEmail}</p>
@@ -130,7 +130,7 @@ export function CaregiverInvites() {
       {invites.data.map((inv) => (
         <li key={inv.id} className="flex flex-col gap-3 rounded-xl border bg-card p-4 sm:flex-row sm:items-center">
           <Avatar className="size-11">
-            <AvatarFallback className="bg-primary/15 text-primary">{initials(inv.patient?.name ?? "?")}</AvatarFallback>
+            <AvatarFallback className="bg-secondary text-primary">{initials(inv.patient?.name ?? "?")}</AvatarFallback>
           </Avatar>
           <div className="min-w-0 flex-1">
             <p className="font-semibold">{inv.patient?.name}</p>

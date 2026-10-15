@@ -184,8 +184,8 @@ export default function AdminUsersPage() {
                         <div className="min-w-0">
                           <p className="flex items-center gap-1.5 font-medium">
                             {u.name}
-                            {u.isEmailVerified && <ShieldCheck className="size-3.5 text-success" aria-label={t("Email verified", "ইমেইল যাচাইকৃত")} />}
-                            {u.plan === "PREMIUM" && <Crown className="size-3.5 text-amber-500" aria-label={t("Premium", "প্রিমিয়াম")} />}
+                            {u.isEmailVerified && <ShieldCheck className="size-3.5 text-primary" aria-label={t("Email verified", "ইমেইল যাচাইকৃত")} />}
+                            {u.plan === "PREMIUM" && <Crown className="size-3.5 text-primary" aria-label={t("Premium", "প্রিমিয়াম")} />}
                           </p>
                           <p className="max-w-56 truncate text-xs text-muted-foreground">{u.email}</p>
                         </div>

@@ -37,7 +37,7 @@ function MedicineCard({ medicine, patientId }: { medicine: Medicine; patientId?:
     <Card className={medicine.isActive ? "h-full" : "h-full opacity-70"}>
       <CardContent className="flex h-full flex-col gap-3">
         <div className="flex items-start gap-3">
-          <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+          <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-secondary text-primary">
             <Pill className="size-6" />
           </span>
           <div className="min-w-0 flex-1">

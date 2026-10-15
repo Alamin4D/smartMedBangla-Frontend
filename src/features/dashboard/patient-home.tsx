@@ -47,8 +47,8 @@ export function PatientHome({ user }: { user: User }) {
       />
 
       {data && data.expiringItems.length > 0 && (
-        <Alert className="mb-6 border-warning/50 bg-warning/10">
-          <AlertTriangle className="text-amber-600" />
+        <Alert className="mb-6 border-primary/30 bg-secondary">
+          <AlertTriangle className="text-primary" />
           <AlertTitle>{t("Medicines expiring soon", "শীঘ্রই মেয়াদ শেষ হচ্ছে")}</AlertTitle>
           <AlertDescription>
             <p>

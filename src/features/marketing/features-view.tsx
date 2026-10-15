@@ -29,7 +29,7 @@ export function FeaturesView() {
             <Card className="group h-full transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="grid size-12 place-items-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <span className="grid size-12 place-items-center rounded-2xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                     <f.icon className="size-6" />
                   </span>
                   {f.ai && <Badge>AI</Badge>}

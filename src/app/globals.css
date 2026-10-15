@@ -50,78 +50,83 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* SmartMed palette – calm medical teal, high contrast for older eyes */
+/*
+ * SmartMed palette – two brand colours only:
+ *   primary   = dark blue (navy)       → buttons, links, headings, active states
+ *   secondary = white + soft blue tint → surfaces, chips, hover fills
+ * Red (destructive) is reserved for danger states (errors, missed doses, expired medicine).
+ */
 :root {
-  --background: oklch(0.99 0.004 190);
-  --foreground: oklch(0.2 0.02 230);
+  --background: oklch(0.985 0.006 255);
+  --foreground: oklch(0.24 0.06 265);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 230);
+  --card-foreground: oklch(0.24 0.06 265);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.02 230);
-  --primary: oklch(0.52 0.1 185);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.015 190);
-  --secondary-foreground: oklch(0.28 0.04 200);
-  --muted: oklch(0.965 0.008 200);
-  --muted-foreground: oklch(0.48 0.02 230);
-  --accent: oklch(0.95 0.03 185);
-  --accent-foreground: oklch(0.3 0.06 190);
-  --destructive: oklch(0.58 0.22 27);
-  --success: oklch(0.6 0.15 150);
-  --warning: oklch(0.75 0.15 75);
-  --border: oklch(0.91 0.01 200);
-  --input: oklch(0.88 0.012 200);
-  --ring: oklch(0.6 0.1 185);
-  --chart-1: oklch(0.6 0.11 185);
-  --chart-2: oklch(0.65 0.17 25);
-  --chart-3: oklch(0.75 0.15 75);
-  --chart-4: oklch(0.55 0.15 260);
-  --chart-5: oklch(0.6 0.15 320);
+  --popover-foreground: oklch(0.24 0.06 265);
+  --primary: oklch(0.37 0.135 265);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.955 0.022 255);
+  --secondary-foreground: oklch(0.37 0.135 265);
+  --muted: oklch(0.965 0.012 255);
+  --muted-foreground: oklch(0.47 0.04 262);
+  --accent: oklch(0.955 0.022 255);
+  --accent-foreground: oklch(0.37 0.135 265);
+  --destructive: oklch(0.55 0.21 27);
+  --success: oklch(0.45 0.14 262);
+  --warning: oklch(0.45 0.14 262);
+  --border: oklch(0.91 0.018 255);
+  --input: oklch(0.87 0.025 255);
+  --ring: oklch(0.5 0.15 262);
+  --chart-1: oklch(0.37 0.135 265);
+  --chart-2: oklch(0.6 0.2 27);
+  --chart-3: oklch(0.78 0.08 255);
+  --chart-4: oklch(0.55 0.13 260);
+  --chart-5: oklch(0.88 0.04 255);
   --radius: 0.75rem;
-  --sidebar: oklch(0.985 0.006 190);
-  --sidebar-foreground: oklch(0.25 0.02 230);
-  --sidebar-primary: oklch(0.52 0.1 185);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.94 0.03 185);
-  --sidebar-accent-foreground: oklch(0.3 0.06 190);
-  --sidebar-border: oklch(0.91 0.01 200);
-  --sidebar-ring: oklch(0.6 0.1 185);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.3 0.06 265);
+  --sidebar-primary: oklch(0.37 0.135 265);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.955 0.022 255);
+  --sidebar-accent-foreground: oklch(0.37 0.135 265);
+  --sidebar-border: oklch(0.91 0.018 255);
+  --sidebar-ring: oklch(0.5 0.15 262);
 }
 
 .dark {
-  --background: oklch(0.17 0.015 230);
-  --foreground: oklch(0.96 0.005 200);
-  --card: oklch(0.21 0.018 230);
-  --card-foreground: oklch(0.96 0.005 200);
-  --popover: oklch(0.21 0.018 230);
-  --popover-foreground: oklch(0.96 0.005 200);
-  --primary: oklch(0.74 0.12 182);
-  --primary-foreground: oklch(0.18 0.03 200);
-  --secondary: oklch(0.27 0.02 220);
-  --secondary-foreground: oklch(0.95 0.005 200);
-  --muted: oklch(0.26 0.018 225);
-  --muted-foreground: oklch(0.72 0.015 220);
-  --accent: oklch(0.3 0.04 190);
-  --accent-foreground: oklch(0.95 0.02 185);
-  --destructive: oklch(0.7 0.19 22);
-  --success: oklch(0.72 0.15 150);
-  --warning: oklch(0.8 0.14 80);
+  --background: oklch(0.17 0.035 265);
+  --foreground: oklch(0.96 0.01 255);
+  --card: oklch(0.215 0.045 265);
+  --card-foreground: oklch(0.96 0.01 255);
+  --popover: oklch(0.215 0.045 265);
+  --popover-foreground: oklch(0.96 0.01 255);
+  --primary: oklch(0.76 0.11 258);
+  --primary-foreground: oklch(0.2 0.06 265);
+  --secondary: oklch(0.27 0.05 265);
+  --secondary-foreground: oklch(0.93 0.03 255);
+  --muted: oklch(0.25 0.04 265);
+  --muted-foreground: oklch(0.74 0.03 258);
+  --accent: oklch(0.27 0.05 265);
+  --accent-foreground: oklch(0.93 0.03 255);
+  --destructive: oklch(0.7 0.18 25);
+  --success: oklch(0.76 0.11 258);
+  --warning: oklch(0.76 0.11 258);
   --border: oklch(1 0 0 / 11%);
   --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.65 0.1 185);
-  --chart-1: oklch(0.74 0.12 182);
-  --chart-2: oklch(0.7 0.17 25);
-  --chart-3: oklch(0.8 0.14 80);
-  --chart-4: oklch(0.68 0.14 260);
-  --chart-5: oklch(0.7 0.15 320);
-  --sidebar: oklch(0.19 0.016 230);
-  --sidebar-foreground: oklch(0.94 0.005 200);
-  --sidebar-primary: oklch(0.74 0.12 182);
-  --sidebar-primary-foreground: oklch(0.18 0.03 200);
-  --sidebar-accent: oklch(0.28 0.03 200);
-  --sidebar-accent-foreground: oklch(0.95 0.02 185);
+  --ring: oklch(0.7 0.12 258);
+  --chart-1: oklch(0.76 0.11 258);
+  --chart-2: oklch(0.7 0.18 25);
+  --chart-3: oklch(0.5 0.08 262);
+  --chart-4: oklch(0.62 0.12 260);
+  --chart-5: oklch(0.88 0.04 255);
+  --sidebar: oklch(0.195 0.04 265);
+  --sidebar-foreground: oklch(0.94 0.01 255);
+  --sidebar-primary: oklch(0.76 0.11 258);
+  --sidebar-primary-foreground: oklch(0.2 0.06 265);
+  --sidebar-accent: oklch(0.27 0.05 265);
+  --sidebar-accent-foreground: oklch(0.93 0.03 255);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.65 0.1 185);
+  --sidebar-ring: oklch(0.7 0.12 258);
 }
 
 @layer base {
@@ -168,36 +173,4 @@
     transform: none;
     transition: none;
   }
-}
-
-/* ─── Homepage palette (deep green + warm orange on cream) ─── */
-.home {
-  --h-bg: #f7f5ef;
-  --h-surface: #ffffff;
-  --h-soft: #f2f1ec;
-  --h-ink: #12322e;
-  --h-muted: #5b6b67;
-  --h-green: #0f4c45;
-  --h-green-deep: #0f4a43;
-  --h-green-soft: #e3efec;
-  --h-orange: #c2410c;
-  --h-orange-hover: #a8380a;
-  --h-orange-soft: #fde9dd;
-  --h-line: #e4e1d8;
-  background: var(--h-bg);
-  color: var(--h-ink);
-}
-.dark .home {
-  --h-bg: #0f1716;
-  --h-surface: #16211f;
-  --h-soft: #1b2826;
-  --h-ink: #e8f1ee;
-  --h-muted: #9fb1ac;
-  --h-green: #5fc3b4;
-  --h-green-deep: #0c2a26;
-  --h-green-soft: #1d3a35;
-  --h-orange: #ea6a2f;
-  --h-orange-hover: #f27d45;
-  --h-orange-soft: #3a2418;
-  --h-line: #26332f;
 }

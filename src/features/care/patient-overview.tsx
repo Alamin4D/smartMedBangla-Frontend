@@ -44,7 +44,7 @@ export function PatientOverviewView({ patientId }: { patientId: string }) {
           <span className="flex items-center gap-3">
             <Avatar className="size-12">
               {patient.avatarUrl && <AvatarImage src={patient.avatarUrl} alt="" />}
-              <AvatarFallback className="bg-primary/15 text-primary">{initials(patient.name)}</AvatarFallback>
+              <AvatarFallback className="bg-secondary text-primary">{initials(patient.name)}</AvatarFallback>
             </Avatar>
             {patient.name}
           </span>
@@ -88,9 +88,9 @@ export function PatientOverviewView({ patientId }: { patientId: string }) {
       </div>
 
       {expiringItems.length > 0 && (
-        <Card className="mb-6 border-warning/60">
+        <Card className="mb-6 border-primary/30 bg-secondary">
           <CardContent className="flex items-start gap-3">
-            <AlertTriangle className="size-5 shrink-0 text-amber-600" />
+            <AlertTriangle className="size-5 shrink-0 text-primary" />
             <p className="text-sm">
               {t("Expiring / expired at home", "ঘরে মেয়াদ শেষ / শেষ হচ্ছে")}: {expiringItems.map((i) => `${i.name} (${fmtDate(i.expiryDate)})`).join(", ")}
             </p>

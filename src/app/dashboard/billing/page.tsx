@@ -66,7 +66,7 @@ export default function BillingPage() {
 
       <Card className="mb-8">
         <CardContent className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <span className="grid size-12 place-items-center rounded-xl bg-primary/10 text-primary">
+          <span className="grid size-12 place-items-center rounded-xl bg-secondary text-primary">
             <Crown className="size-6" />
           </span>
           <div className="flex-1">

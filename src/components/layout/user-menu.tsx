@@ -30,7 +30,7 @@ export function UserMenu({ user }: { user: User }) {
         <Button variant="ghost" className="h-10 gap-2 px-1.5" aria-label={t("Account menu", "অ্যাকাউন্ট মেনু")}>
           <Avatar className="size-8">
             {user.avatarUrl && <AvatarImage src={user.avatarUrl} alt="" />}
-            <AvatarFallback className="bg-primary/15 text-primary">{initials(user.name)}</AvatarFallback>
+            <AvatarFallback className="bg-secondary text-primary">{initials(user.name)}</AvatarFallback>
           </Avatar>
           <span className="hidden max-w-32 truncate text-sm font-medium sm:inline">{user.name}</span>
         </Button>
