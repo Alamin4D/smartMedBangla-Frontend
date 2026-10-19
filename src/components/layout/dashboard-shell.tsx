@@ -48,7 +48,7 @@ export function DashboardShell({ children, allow }: { children: ReactNode; allow
       </a>
       <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r bg-sidebar lg:flex">
         <div className="flex h-16 items-center px-5">
-          <Logo href={user.role === "ADMIN" ? "/admin" : "/dashboard"} />
+          <Logo href={user.role === "ADMIN" ? "/admin" : "/"} />
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-4">
           <SidebarNav role={user.role} />

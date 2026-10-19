@@ -29,6 +29,9 @@
   --color-destructive: var(--destructive);
   --color-success: var(--success);
   --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-offer: var(--offer);
+  --color-offer-foreground: var(--offer-foreground);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -50,83 +53,84 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/*
- * SmartMed palette – two brand colours only:
- *   primary   = dark blue (navy)       → buttons, links, headings, active states
- *   secondary = white + soft blue tint → surfaces, chips, hover fills
- * Red (destructive) is reserved for danger states (errors, missed doses, expired medicine).
- */
+/* SmartMed palette – pharmacy look: clean white, health green, red for Rx, amber for offers */
 :root {
-  --background: oklch(0.985 0.006 255);
-  --foreground: oklch(0.24 0.06 265);
+  --background: oklch(0.985 0.006 155);
+  --foreground: oklch(0.22 0.035 165);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.06 265);
+  --card-foreground: oklch(0.22 0.035 165);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.06 265);
-  --primary: oklch(0.37 0.135 265);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.955 0.022 255);
-  --secondary-foreground: oklch(0.37 0.135 265);
-  --muted: oklch(0.965 0.012 255);
-  --muted-foreground: oklch(0.47 0.04 262);
-  --accent: oklch(0.955 0.022 255);
-  --accent-foreground: oklch(0.37 0.135 265);
-  --destructive: oklch(0.55 0.21 27);
-  --success: oklch(0.45 0.14 262);
-  --warning: oklch(0.45 0.14 262);
-  --border: oklch(0.91 0.018 255);
-  --input: oklch(0.87 0.025 255);
-  --ring: oklch(0.5 0.15 262);
-  --chart-1: oklch(0.37 0.135 265);
-  --chart-2: oklch(0.6 0.2 27);
-  --chart-3: oklch(0.78 0.08 255);
-  --chart-4: oklch(0.55 0.13 260);
-  --chart-5: oklch(0.88 0.04 255);
+  --popover-foreground: oklch(0.22 0.035 165);
+  --primary: oklch(0.56 0.15 155);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.03 155);
+  --secondary-foreground: oklch(0.3 0.07 160);
+  --muted: oklch(0.965 0.01 160);
+  --muted-foreground: oklch(0.48 0.03 170);
+  --accent: oklch(0.94 0.05 155);
+  --accent-foreground: oklch(0.32 0.08 160);
+  --destructive: oklch(0.58 0.22 27);
+  --success: oklch(0.6 0.16 150);
+  --warning: oklch(0.78 0.16 80);
+  --info: oklch(0.58 0.14 245);
+  --offer: oklch(0.62 0.21 35);
+  --offer-foreground: oklch(0.99 0 0);
+  --border: oklch(0.91 0.015 160);
+  --input: oklch(0.87 0.02 160);
+  --ring: oklch(0.62 0.15 155);
+  --chart-1: oklch(0.6 0.15 155);
+  --chart-2: oklch(0.65 0.18 30);
+  --chart-3: oklch(0.78 0.16 80);
+  --chart-4: oklch(0.58 0.14 245);
+  --chart-5: oklch(0.6 0.15 320);
   --radius: 0.75rem;
-  --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.3 0.06 265);
-  --sidebar-primary: oklch(0.37 0.135 265);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.955 0.022 255);
-  --sidebar-accent-foreground: oklch(0.37 0.135 265);
-  --sidebar-border: oklch(0.91 0.018 255);
-  --sidebar-ring: oklch(0.5 0.15 262);
+  --sidebar: oklch(0.985 0.01 155);
+  --sidebar-foreground: oklch(0.25 0.035 165);
+  --sidebar-primary: oklch(0.56 0.15 155);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.94 0.05 155);
+  --sidebar-accent-foreground: oklch(0.32 0.08 160);
+  --sidebar-border: oklch(0.91 0.015 160);
+  --sidebar-ring: oklch(0.62 0.15 155);
 }
 
 .dark {
-  --background: oklch(0.17 0.035 265);
-  --foreground: oklch(0.96 0.01 255);
-  --card: oklch(0.215 0.045 265);
-  --card-foreground: oklch(0.96 0.01 255);
-  --popover: oklch(0.215 0.045 265);
-  --popover-foreground: oklch(0.96 0.01 255);
-  --primary: oklch(0.76 0.11 258);
-  --primary-foreground: oklch(0.2 0.06 265);
-  --secondary: oklch(0.27 0.05 265);
-  --secondary-foreground: oklch(0.93 0.03 255);
-  --muted: oklch(0.25 0.04 265);
-  --muted-foreground: oklch(0.74 0.03 258);
-  --accent: oklch(0.27 0.05 265);
-  --accent-foreground: oklch(0.93 0.03 255);
-  --destructive: oklch(0.7 0.18 25);
-  --success: oklch(0.76 0.11 258);
-  --warning: oklch(0.76 0.11 258);
-  --border: oklch(1 0 0 / 11%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.7 0.12 258);
-  --chart-1: oklch(0.76 0.11 258);
-  --chart-2: oklch(0.7 0.18 25);
-  --chart-3: oklch(0.5 0.08 262);
-  --chart-4: oklch(0.62 0.12 260);
-  --chart-5: oklch(0.88 0.04 255);
-  --sidebar: oklch(0.195 0.04 265);
-  --sidebar-foreground: oklch(0.94 0.01 255);
-  --sidebar-primary: oklch(0.76 0.11 258);
-  --sidebar-primary-foreground: oklch(0.2 0.06 265);
-  --sidebar-accent: oklch(0.27 0.05 265);
-  --sidebar-accent-foreground: oklch(0.93 0.03 255);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.7 0.12 258);
+  --background: oklch(0 0 0);
+  --foreground: oklch(0.96 0.01 160);
+  --card: oklch(0.1 0 0);
+  --card-foreground: oklch(0.96 0.01 160);
+  --popover: oklch(0.1 0 0);
+  --popover-foreground: oklch(0.96 0.01 160);
+  --primary: oklch(0.78 0.18 155);
+  --primary-foreground: oklch(0.17 0.05 165);
+  --secondary: oklch(0.14 0 0);
+  --secondary-foreground: oklch(0.95 0.015 160);
+  --muted: oklch(0.14 0 0);
+  --muted-foreground: oklch(0.74 0.03 165);
+  --accent: oklch(0.3 0.06 160);
+  --accent-foreground: oklch(0.96 0.03 155);
+  --destructive: oklch(0.72 0.19 25);
+  --success: oklch(0.78 0.17 152);
+  --warning: oklch(0.84 0.15 85);
+  --info: oklch(0.72 0.13 245);
+  --offer: oklch(0.76 0.17 50);
+  --offer-foreground: oklch(0.2 0.04 45);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.72 0.16 155);
+  --chart-1: oklch(0.78 0.18 155);
+  --chart-2: oklch(0.74 0.17 40);
+  --chart-3: oklch(0.84 0.15 85);
+  --chart-4: oklch(0.72 0.13 245);
+  --chart-5: oklch(0.72 0.15 320);
+  --sidebar: oklch(0 0 0);
+  --sidebar-foreground: oklch(0.95 0.012 160);
+  --sidebar-primary: oklch(0.78 0.18 155);
+  --sidebar-primary-foreground: oklch(0.17 0.05 165);
+  --sidebar-accent: oklch(0.28 0.05 162);
+  --sidebar-accent-foreground: oklch(0.96 0.03 155);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: oklch(0.72 0.16 155);
 }
 
 @layer base {
@@ -173,4 +177,346 @@
     transform: none;
     transition: none;
   }
+}
+
+/* ─── Homepage palette (pharmacy: white + health green + offer orange) ─── */
+.home {
+  --h-bg: #ffffff;
+  --h-surface: #ffffff;
+  --h-soft: #f1f8f4;
+  --h-ink: #0d2b22;
+  --h-muted: #55695f;
+  --h-green: #0a8f4f;
+  --h-green-deep: #066b3a;
+  --h-green-soft: #e0f3e8;
+  --h-orange: #f26a1b;
+  --h-orange-hover: #d95a10;
+  --h-orange-soft: #ffeadb;
+  --h-red: #d92d20;
+  --h-red-soft: #fee4e2;
+  --h-blue: #1570ef;
+  --h-blue-soft: #e0edff;
+  --h-line: #dcebe2;
+  --h-green-hover: #066b3a;
+  --h-on-green: #ffffff;
+  --h-on-orange: #ffffff;
+  background: var(--h-bg);
+  color: var(--h-ink);
+}
+.dark .home {
+  --h-bg: #000000;
+  --h-surface: #0a0a0a;
+  --h-soft: #000000;
+  --h-ink: #eaf6ef;
+  --h-muted: #9fb8ac;
+  --h-green: #3ddc84;
+  --h-green-deep: #000000;
+  --h-green-hover: #6ee7a0;
+  --h-green-soft: #123a29;
+  --h-orange: #ff8a3d;
+  --h-orange-hover: #ffa062;
+  --h-orange-soft: #3a2010;
+  --h-red: #ff7a70;
+  --h-red-soft: #3d1a17;
+  --h-blue: #6aa8ff;
+  --h-blue-soft: #14284a;
+  --h-line: #24332b;
+  --h-on-green: #04281a;
+  --h-on-orange: #2a1000;
+}
+
+/* ─── Pharmacy components ─── */
+
+/* Top offer / delivery strip */
+.promo-strip {
+  background: var(--h-green-deep);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Big rounded search bar (medicine search) */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--h-surface);
+  border: 2px solid var(--h-green);
+  border-radius: 999px;
+  padding: 0.35rem 0.35rem 0.35rem 1.25rem;
+  box-shadow: 0 6px 24px -10px rgb(10 143 79 / 0.35);
+}
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: var(--h-ink);
+}
+.search-bar button {
+  background: var(--h-green);
+  color: var(--h-on-green);
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+.search-bar button:hover {
+  background: var(--h-green-hover);
+}
+
+/* Hero banner with soft green gradient */
+.hero-pharma {
+  background:
+    radial-gradient(circle at 85% 20%, var(--h-green-soft) 0, transparent 55%),
+    linear-gradient(180deg, var(--h-soft), var(--h-bg));
+  border-bottom: 1px solid var(--h-line);
+}
+
+/* Category chips (Medicine, Lab Test, Healthcare, ...) */
+.category-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.75rem;
+  background: var(--h-surface);
+  border: 1px solid var(--h-line);
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.category-chip:hover {
+  border-color: var(--h-green);
+  box-shadow: 0 6px 18px -10px rgb(10 143 79 / 0.5);
+}
+.category-chip .icon-wrap {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--h-green-soft);
+  color: var(--h-green);
+}
+
+/* Product / medicine card */
+.product-card {
+  position: relative;
+  background: var(--h-surface);
+  border: 1px solid var(--h-line);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.product-card:hover {
+  border-color: var(--h-green);
+  box-shadow: 0 10px 28px -14px rgb(10 143 79 / 0.45);
+}
+.product-card .price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--h-ink);
+}
+.product-card .mrp {
+  font-size: 0.85rem;
+  color: var(--h-muted);
+  text-decoration: line-through;
+}
+
+/* Discount tag (e.g. 20% OFF) */
+.discount-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--h-orange);
+  color: var(--h-on-orange);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.4rem;
+}
+
+/* Prescription required / OTC / Stock tags */
+.rx-badge,
+.otc-badge,
+.stock-badge,
+.stock-badge-out {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+.rx-badge {
+  background: var(--h-red-soft);
+  color: var(--h-red);
+}
+.otc-badge {
+  background: var(--h-blue-soft);
+  color: var(--h-blue);
+}
+.stock-badge {
+  background: var(--h-green-soft);
+  color: var(--h-green-deep);
+}
+.stock-badge-out {
+  background: var(--h-line);
+  color: var(--h-muted);
+}
+.dark .stock-badge {
+  color: var(--h-green);
+}
+
+/* Buttons */
+.btn-green {
+  background: var(--h-green);
+  color: var(--h-on-green);
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.15s ease;
+}
+.btn-green:hover {
+  background: var(--h-green-hover);
+}
+.btn-offer {
+  background: var(--h-orange);
+  color: var(--h-on-orange);
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.15s ease;
+}
+.btn-offer:hover {
+  background: var(--h-orange-hover);
+}
+.btn-outline-green {
+  border: 2px solid var(--h-green);
+  color: var(--h-green);
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.3rem;
+  transition: background 0.15s ease;
+}
+.btn-outline-green:hover {
+  background: var(--h-green-soft);
+}
+
+/* Trust bar: genuine medicines, fast delivery, secure payment ... */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  background: var(--h-soft);
+  border: 1px solid var(--h-line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.trust-item .icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--h-green-soft);
+  color: var(--h-green);
+}
+
+/* Upload prescription call-out */
+.rx-upload {
+  border: 2px dashed var(--h-green);
+  background: var(--h-green-soft);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Sticky cart bar (mobile) */
+.cart-bar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--h-green);
+  color: var(--h-on-green);
+  padding: 0.85rem 1.25rem;
+  padding-bottom: calc(0.85rem + env(safe-area-inset-bottom, 0px));
+  font-weight: 600;
+}
+
+/* ─── Dark mode polish (glow instead of flat shadows) ─── */
+.dark .home .promo-strip {
+  background: #000000;
+  color: var(--h-green);
+  border-bottom: 1px solid var(--h-line);
+}
+.dark .home .hero-pharma {
+  background:
+    radial-gradient(60% 80% at 85% 10%, rgb(61 220 132 / 0.10) 0, transparent 60%),
+    #000000;
+  border-bottom-color: var(--h-line);
+}
+.dark .home .search-bar {
+  background: var(--h-surface);
+  border-color: var(--h-green);
+  box-shadow: 0 0 0 4px rgb(61 220 132 / 0.12), 0 10px 30px -12px rgb(61 220 132 / 0.45);
+}
+.dark .home .category-chip,
+.dark .home .product-card,
+.dark .home .trust-bar {
+  background: var(--h-surface);
+  border-color: var(--h-line);
+}
+.dark .home .category-chip:hover,
+.dark .home .product-card:hover {
+  border-color: var(--h-green);
+  box-shadow: 0 0 0 1px rgb(61 220 132 / 0.35), 0 14px 34px -14px rgb(61 220 132 / 0.4);
+}
+.dark .home .category-chip .icon-wrap,
+.dark .home .trust-item .icon-wrap {
+  background: var(--h-green-soft);
+  box-shadow: inset 0 0 0 1px rgb(61 220 132 / 0.25);
+}
+.dark .home .rx-upload {
+  background: rgb(61 220 132 / 0.08);
+  border-color: rgb(61 220 132 / 0.55);
+}
+.dark .home .btn-outline-green {
+  border-color: var(--h-green);
+  color: var(--h-green);
+}
+.dark .home .btn-outline-green:hover {
+  background: rgb(61 220 132 / 0.12);
+}
+.dark .home .cart-bar {
+  box-shadow: 0 -8px 30px -10px rgb(0 0 0 / 0.6);
+}
+
+/* Dark mode: every section sits on pure black */
+.dark body,
+.dark .home,
+.dark main,
+.dark section,
+.dark header,
+.dark footer {
+  background-color: #000000;
 }
